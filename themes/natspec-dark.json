@@ -1,0 +1,60 @@
+{
+  "name": "NatSpec++ Dark",
+  "type": "dark",
+  "colors": {
+    "editor.foreground": "#CCCCCC",
+    "editor.background": "#1E1E1E"
+  },
+  "tokenColors": [
+    {
+      "name": "NatSpec++ Execution Tags",
+      "scope": "entity.name.tag.natspec.execution",
+      "settings": {
+        "foreground": "#569CD6"
+      }
+    },
+    {
+      "name": "NatSpec++ Parallelization Tags",
+      "scope": "entity.name.tag.natspec.parallelization",
+      "settings": {
+        "foreground": "#4EC9B0"
+      }
+    },
+    {
+      "name": "NatSpec++ Sharding Tags",
+      "scope": "entity.name.tag.natspec.sharding",
+      "settings": {
+        "foreground": "#C586C0"
+      }
+    },
+    {
+      "name": "NatSpec++ Intrinsic Tags",
+      "scope": "entity.name.tag.natspec.intrinsic",
+      "settings": {
+        "foreground": "#DCDCAA",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "NatSpec++ Boolean Values",
+      "scope": "constant.language.boolean.natspec.value",
+      "settings": {
+        "foreground": "#CE9178"
+      }
+    },
+    {
+      "name": "NatSpec++ String Values",
+      "scope": "string.quoted.double.natspec.value",
+      "settings": {
+        "foreground": "#CE9178"
+      }
+    },
+    {
+      "name": "NatSpec++ Number Values",
+      "scope": "constant.numeric.natspec.value",
+      "settings": {
+        "foreground": "#B5CEA8"
+      }
+    }
+  ]
+}

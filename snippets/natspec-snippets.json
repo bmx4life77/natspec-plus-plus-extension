@@ -1,0 +1,21 @@
+{
+  "NatSpec Parallel Function": {
+    "prefix": "natspec-parallel",
+    "body": [
+      "/**",
+      " * @notice ${1:Function description}",
+      " * @dev ${2:Developer notes}",
+      " * @param ${3:paramName} ${4:Parameter description}",
+      " * @return ${5:returnName} ${6:Return description}",
+      " * ",
+      " * @parallel: true",
+      " * @threadSafe: ${7|true,false|}",
+      " * @shard: ${8|byUser,byContract,system,cross,global,isolated|}",
+      " * @dependency: [${9:\"dependency1\", \"dependency2\"}]",
+      " * @maxConcurrency: ${10:10}",
+      " * @gasOptimized: ${11|true,false|}",
+      " */"
+    ],
+    "description": "Complete NatSpec++ template for parallel execution functions"
+  }
+}

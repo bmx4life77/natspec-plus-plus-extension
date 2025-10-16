@@ -1,0 +1,133 @@
+{
+  "name": "natspec-plus-plus",
+  "displayName": "NatSpec++ Protocol",
+  "description": "Advanced NatSpec tag support for Parallel Execution Fabric and Smart Contract Documentation",
+  "version": "1.0.0",
+  "publisher": "NatSpecPlusPlus",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters",
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onLanguage:solidity"
+  ],
+  "main": "./out/src/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "solidity",
+        "aliases": [
+          "Solidity",
+          "solidity"
+        ],
+        "extensions": [
+          ".sol"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "solidity",
+        "scopeName": "source.solidity",
+        "path": "./syntaxes/solidity.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "solidity",
+        "path": "./snippets/natspec-snippets.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "natspec-plus-plus.processTags",
+        "title": "Process NatSpec++ Tags",
+        "category": "NatSpec++"
+      },
+      {
+        "command": "natspec-plus-plus.validateTags",
+        "title": "Validate NatSpec++ Tags",
+        "category": "NatSpec++"
+      },
+      {
+        "command": "natspec-plus-plus.generateDocs",
+        "title": "Generate Documentation",
+        "category": "NatSpec++"
+      },
+      {
+        "command": "natspec-plus-plus.insertTag",
+        "title": "Insert NatSpec++ Tag",
+        "category": "NatSpec++"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "natspec-plus-plus.insertTag",
+        "key": "ctrl+shift+n",
+        "mac": "cmd+shift+n",
+        "when": "editorLangId == solidity"
+      }
+    ],
+    "configuration": {
+      "title": "NatSpec++",
+      "properties": {
+        "natspec-plus-plus.enableDiagnostics": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable real-time validation of NatSpec++ tags"
+        },
+        "natspec-plus-plus.enableAutoComplete": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable auto-completion for NatSpec++ tags"
+        },
+        "natspec-plus-plus.validationLevel": {
+          "type": "string",
+          "enum": [
+            "error",
+            "warning",
+            "info"
+          ],
+          "default": "error",
+          "description": "Severity level for tag validation issues"
+        },
+        "natspec-plus-plus.customTags": {
+          "type": "object",
+          "default": {},
+          "description": "Custom NatSpec++ tag definitions"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "typescript": "^5.0.0",
+    "@types/glob": "^8.1.0",
+    "@vscode/vsce": "^2.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/natspec-plus-plus-extension"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/natspec-plus-plus-extension/issues"
+  },
+  "homepage": "https://github.com/your-username/natspec-plus-plus-extension#readme",
+  "license": "MIT"
+}

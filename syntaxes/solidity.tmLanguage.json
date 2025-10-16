@@ -1,0 +1,86 @@
+{
+  "scopeName": "source.solidity.natspec",
+  "patterns": [
+    {
+      "include": "#natspec-plus-plus"
+    }
+  ],
+  "repository": {
+    "natspec-plus-plus": {
+      "patterns": [
+        {
+          "name": "comment.block.documentation.natspec-plus-plus",
+          "begin": "/\\*\\*",
+          "end": "\\*/",
+          "patterns": [
+            {
+              "include": "#natspec-tags"
+            }
+          ]
+        },
+        {
+          "name": "comment.line.documentation.natspec-plus-plus",
+          "begin": "///",
+          "end": "$",
+          "patterns": [
+            {
+              "include": "#natspec-tags"
+            }
+          ]
+        }
+      ]
+    },
+    "natspec-tags": {
+      "patterns": [
+        {
+          "name": "meta.tag.natspec.execution",
+          "match": "@(parallel|atomic|sequential|async|synchronous)\\s*:",
+          "captures": {
+            "1": {
+              "name": "entity.name.tag.natspec.execution"
+            }
+          }
+        },
+        {
+          "name": "meta.tag.natspec.parallelization",
+          "match": "@(threadSafe|maxConcurrency|lockRequired|readOnly|writeIntensive)\\s*:",
+          "captures": {
+            "1": {
+              "name": "entity.name.tag.natspec.parallelization"
+            }
+          }
+        },
+        {
+          "name": "meta.tag.natspec.sharding",
+          "match": "@(shard|shardAffinity|crossShard|shardBarrier|shardMigration)\\s*:",
+          "captures": {
+            "1": {
+              "name": "entity.name.tag.natspec.sharding"
+            }
+          }
+        },
+        {
+          "name": "meta.tag.natspec.intrinsic",
+          "match": "@(intrinsic|vectorized|bidirectional|pipeline|fabric)\\s*:",
+          "captures": {
+            "1": {
+              "name": "entity.name.tag.natspec.intrinsic keyword.other.special-method"
+            }
+          }
+        },
+        {
+          "name": "string.quoted.double.natspec.value",
+          "match": ":\\s*\"([^\"]*)\""
+        },
+        {
+          "name": "constant.language.boolean.natspec.value",
+          "match": ":\\s*(true|false)"
+        },
+        {
+          "name": "constant.numeric.natspec.value",
+          "match": ":\\s*([0-9]+)"
+        }
+      ]
+    }
+  }
+}
