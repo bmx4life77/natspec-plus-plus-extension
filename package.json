@@ -32,7 +32,7 @@
     ],
     "grammars": [
       {
-        "language": "solidity",
+        "language": "solidity         ",
         "scopeName": "source.solidity",
         "path": "./syntaxes/solidity.tmLanguage.json"
       }
