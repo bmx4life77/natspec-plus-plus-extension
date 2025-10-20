@@ -2,8 +2,6 @@
 
 ## Beta VU Iota Phi Psi5
 
-* A New Standardization of Measurement and Notational Values Through Orthogonal Decomposition
-
 ## The ISA Rebellion Metrics represent a paradigm shift in parallel execution measurement
 
 Abstract
@@ -65,7 +63,7 @@ TradingProtocolΨ = {
 
 V. The Scientific Foundation
 
-V.a).  Orthogonality Proof
+   a).  Orthogonality Proof
 
 The four dimensions are mathematically independent:
 
