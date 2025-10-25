@@ -1,4 +1,4 @@
-/// @notice Decentralized exchange with parallel execution support
+/// @notice Decentralized exchange with parallel execution support 
 /// @dev Core DEX contract implementing parallel transaction processing
 /// @parallel: true 
 /// @threadSafe: true
